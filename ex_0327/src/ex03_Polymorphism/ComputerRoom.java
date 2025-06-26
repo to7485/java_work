@@ -8,7 +8,7 @@ public class ComputerRoom {
 //	LZ com1;
 //	LZ com2;
 	
-	Computer com1;
+	Computer com1; //Computer클래스를 상속받은 클래스의 객체들
 	Computer com2;
 	
 	public void allPowerOn() {

@@ -1,8 +1,10 @@
 package ex02_db;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,6 +23,9 @@ public class PersonMethod {
 			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 
+			//next()
+			//읽어올 행이 있으면 true
+			//없으면 false
 			while (rs.next()) {
 				Person p = new Person();
 				p.setIdx(rs.getInt("idx"));
@@ -29,7 +34,9 @@ public class PersonMethod {
 
 				list.add(p);
 			}
-		} catch (Exception e) {
+			//SQLException
+			//데이터에 접근하는 동안 발생하는 모든 예외
+		} catch (SQLException e) {
 			// TODO: handle exception
 		} finally {
 			try {

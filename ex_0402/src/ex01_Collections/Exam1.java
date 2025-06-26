@@ -12,14 +12,27 @@ public class Exam1 {
 			    "David:Tablet", "Eve:Phone", "Frank:Phone", "Alice:Phone"
 			);
 		
+		System.out.println(orders);
+		
+		//key가 String이고 value가 Integer인 HM을 만듦
 		Map<String, Integer> productCount = new HashMap<>();
 		
+		//ArrayList에서 요소를 하나씩 꺼내서
 		for(String value : orders) {
+			
+			//:를 기준으로 잘라서 배열을 만듦
 			String[] part = value.split(":");
 			
+			//["Alice","TV"]
+			//["BoB","TV"]
+			// ...
+			
 			//상품이름이 들어갔음
+			//String product = "TV";
 			String product = part[1];
 			
+			//productCount.put("TV", 1);
+			//productCount.put("TV", 2);
 			productCount.put(product, productCount.getOrDefault(product, 0)+1);
 		
 		}

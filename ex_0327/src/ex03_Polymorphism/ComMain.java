@@ -2,8 +2,8 @@ package ex03_Polymorphism;
 
 public class ComMain {
 	public static void main(String[] args) {
+		//컴퓨터실 만듦
 		ComputerRoom cr = new ComputerRoom();
-		//Computer com1 = new Samsung();
 		cr.com1 = new Samsung();
 		
 		//Computer com2 = new LZ();

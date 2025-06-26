@@ -8,7 +8,7 @@ public class Ex05_throws {
 	public static void checkYourSelf(Scanner sc) throws InputMismatchException{
 		System.out.println("1. 사람과 어울리는 것이 좋다. 2. 혼자 있는 것이 좋다.");
 		System.out.print("선택 : ");
-		int check = sc.nextInt();
+		int check = sc.nextInt();//InputMismatchException
 		
 		if(check == 1) {
 			System.out.println("당신은 E입니다.");
